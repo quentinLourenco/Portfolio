@@ -1,0 +1,118 @@
+.apropos__container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+  
+.apropos__moi {
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* ignore aspect ratio compatibility */
+    border-radius: 2rem;
+    background: linear-gradient(
+        90deg,
+        transparent, 
+        var(--color-primary),
+        transparent
+    );
+    display: grid;
+    place-items: center;
+    margin-top: 80px;
+}
+
+.apropos__moi-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(360deg);
+    transition: var(--transition);
+    /* font-size: 3rem; */
+}
+
+.apropos__moi-image:hover {
+    transform: rotate(0);
+}
+
+.apropos__cartes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    font-size: 2px;
+    margin-top: 20px;
+}
+
+.apropos__carte {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.apropos__carte:hover {
+    border-color: var(--color-primary-variant);
+    background: transparent;
+    cursor: default;
+}
+
+.apropos__icone {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.apropos__carte h5 {
+    font-size: 0.95rem;
+}
+
+.apropos__carte small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.apropos__contenu p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-white);
+}
+
+/* ======MEDIA QUERY MEDIUM DEVICE */
+
+@media screen and (max-width: 1024px) {
+    .apropos__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .apropos__moi {
+        margin: 2rem auto 4rem;
+        width: 50%;
+    }
+
+    .apropos__contenu p {
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+/* ======MEDIA QUERY SMALL DEVICE */
+
+@media screen and (max-width: 600px) {
+    .apropos__moi {
+        margin: 0 auto 3rem;
+        width: 65%;
+    }
+
+    .apropos__cartes {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .apropos__contenu {
+        text-align: center;
+    }
+
+    .apropos__contenu p {
+        margin: 1.5rem 0;
+    }
+}
